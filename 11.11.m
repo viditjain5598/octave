@@ -1,7 +1,7 @@
 clc; clear all; close all;
-M=21; tau=(M-1)/2;
+M=25; tau=(M-1)/2;
 n=0:M-1;
-hd=((cos(pi*(n-tau)))./((n-tau))) - (sin(pi*(n-tau)))./(pi*(n-tau).^2);
+hd=(2./(pi*(n-tau))) .* (sin(pi*(n-tau))./2).^2);
 hd(tau+1)=0;
 whamm=hamming(M);
 h=hd.*whamm;

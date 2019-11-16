@@ -1,5 +1,5 @@
 clc; clear all; close all;
-M=21; tau=(M-1)/2;
+M=22; tau=(M-1)/2;
 n=0:M-1;
 hd=((cos(pi*(n-tau)))./((n-tau))) - (sin(pi*(n-tau)))./(pi*(n-tau).^2);
 hd(tau+1)=0;
